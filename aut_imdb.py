@@ -51,7 +51,18 @@ def buscar_notas_em_lote(lista_series):
 
             if isinstance(nota, (int, float)) and nota >= 8.0:
                 resultados_finais.append(
-                    [titulo, ano, nota, onde_assistir, status, generos, link_imdb]
+                    [
+                        titulo,
+                        ano,
+                        nota,
+                        onde_assistir,
+                        status,
+                        generos,
+                        link_imdb,
+                        duracao_media,
+                        idioma,
+                        pais,
+                    ]
                 )
                 print(f"  -> {titulo} aprovada! (Nota: {nota})")
             else:
@@ -79,6 +90,9 @@ def buscar_notas_em_lote(lista_series):
                 "Status",
                 "Gêneros",
                 "Link IMDB",
+                "Duração Média",
+                "Idioma",
+                "País",
             ]
         )
 
